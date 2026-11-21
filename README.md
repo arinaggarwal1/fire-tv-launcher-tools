@@ -21,3 +21,9 @@ In Switch Launcher, select an installed launcher and choose **Continue** to revi
 Switching launchers changes system component settings and may behave differently across firmware. Keep ADB access available. The software Home-key check cannot confirm how every physical remote behaves.
 
 The APKs are signed; the private signing key is not included. To update an existing installation, the APK must be signed by the same key as the installed version.
+
+## Build from source
+
+The Android source, manifests, and artwork are in `work/project/`. The build scripts currently use macOS paths, Java 17, Android SDK build-tools 34.0.0, Android platform 35, Python 3, and Pillow. Set `ANDROID_SDK_ROOT` if needed.
+
+Keep your PKCS12 signing key at `work/signing/shortcuts.p12` and set `TV_SHORTCUTS_KEYSTORE_PASSWORD` in your environment before running `python3 work/project/launcher/build.py` or `python3 work/project/build.py`. The launcher script expects the alias `tv-shortcuts`. A newly generated signing key cannot update APKs signed with a different key without uninstalling them first.

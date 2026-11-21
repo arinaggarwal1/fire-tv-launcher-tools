@@ -1,0 +1,18 @@
+[
+  [
+    "settings",
+    "Fire TV Settings",
+    "dev.tvshortcuts.settings",
+    "com.amazon.tv.launcher",
+    "com.amazon.tv.launcher.ui.MainSettingsActivity",
+    "Fire-TV-Settings"
+  ],
+  [
+    "store",
+    "Amazon Appstore",
+    "dev.tvshortcuts.appstore",
+    "com.amazon.venezia",
+    "com.amazon.venezia.ade.ADEHomeActivity",
+    "Amazon-Appstore"
+  ]
+]

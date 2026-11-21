@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="dev.tvlaunchers.switcher" android:versionCode="1" android:versionName="1.0">
+ <uses-sdk android:minSdkVersion="25" android:targetSdkVersion="28"/>
+ <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+ <uses-feature android:name="android.software.leanback" android:required="false"/>
+ <queries>
+  <intent><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.HOME"/></intent>
+  <package android:name="com.hydrainnit.refract"/>
+ </queries>
+ <application android:label="Switch Launcher" android:icon="@drawable/icon" android:banner="@drawable/banner" android:theme="@style/LauncherTheme" android:allowBackup="false" android:supportsRtl="true">
+  <meta-data android:name="dev.tvlaunchers.MODE" android:value="switch"/>
+  <activity android:name="dev.tvlaunchers.LauncherActivity" android:label="Switch Launcher" android:icon="@drawable/icon" android:banner="@drawable/banner" android:exported="true" android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize|uiMode">
+   <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/><category android:name="android.intent.category.LEANBACK_LAUNCHER"/></intent-filter>
+  </activity>
+ </application>
+</manifest>
